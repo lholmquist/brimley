@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/lholmquist/brimley/issues"
   },
-  "homepage": "https://github.com/lholmquist/brimley#readme"
+  "homepage": "https://github.com/lholmquist/brimley#readme",
+  "dependencies": {
+    "dockerode": "~3.2.0",
+    "kubernetes-client": "~9.0.0"
+  }
 }
