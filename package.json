@@ -19,6 +19,7 @@
   "homepage": "https://github.com/lholmquist/brimley#readme",
   "dependencies": {
     "dockerode": "~3.2.0",
+    "js-yaml": "~3.14.0",
     "kubernetes-client": "~9.0.0"
   }
 }

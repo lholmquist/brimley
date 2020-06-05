@@ -1,18 +1,25 @@
 'use strict';
 
-const setup = require('../lib/setup');
+const brimleyConfig = require('../lib/brimley-config');
 const dockerize = require('../lib/dockerize');
+const { applyDeployment } = require('../lib/deployments');
+const { applyService } = require('../lib/services');
 
 async function cli (options) {
-  // initialize the kubernetes client
-  // Should we also setup the docker client stuff in this function
-  const client = await setup();
+  // initialize the config
+  // config will include a kube rest client and a docker client
+  const config = await brimleyConfig();
 
-  // Do something based on the command the user chose
   // Create a docker image based on the soure code
+  await dockerize(config);
+
+
   // Create a deployment based on that image
+  const deploymentResponse = await applyDeployment(config);
+
   // Create a service based on that deployment.
-  dockerize();
+  const serviceResponse = await applyService(config);
+  console.log('end');
 }
 
 module.exports = cli;
