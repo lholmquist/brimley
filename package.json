@@ -1,6 +1,6 @@
 {
   "name": "brimley",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Eventual client to connect to kubernetes",
   "bin": {
     "brimley": "./bin/brimley"
