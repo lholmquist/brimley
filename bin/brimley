@@ -1,0 +1,30 @@
+#! /usr/bin/env node
+
+'use strict';
+
+// Providing a title to the process in `ps`
+process.title = 'brimley'; // Thanks Ember-cli :)
+
+const yargs = require('yargs');
+
+const cli = require('./cli');
+
+/* eslint no-unused-expressions: "off" */
+yargs
+  .usage('[--options]')
+  .command(['deploy', '$0'], 'Default command - Deploy Application', { cmd: { default: 'deploy' } }, commandHandler)
+  .command(['build'], 'Build Docker Image', { cmd: { default: 'build' } }, commandHandler)
+  .command(['apply-resource'], 'Apply Kubernetes Resources', { cmd: { default: 'apply-resource' } }, commandHandler)
+  .argv;
+
+async function commandHandler (argv) {
+  let response;
+  try {
+    response = await cli(argv);
+    console.log('complete', response);
+  } catch (err) {
+    console.log(err);
+
+    process.exit(1);
+  }
+}
