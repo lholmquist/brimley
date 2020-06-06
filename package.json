@@ -2,13 +2,22 @@
   "name": "brimley",
   "version": "0.0.1",
   "description": "Eventual client to connect to kubernetes",
+  "bin": {
+    "brimley": "./bin/brimley"
+  },
   "main": "index.js",
   "scripts": {
+    "lint": "eslint bin/* lib/**/*.js index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "Apache-2.0",
+  "support": {
+    "target": "LTS",
+    "response": "REGULAR-7",
+    "backing": "COMPANY"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lholmquist/brimley.git"
@@ -18,8 +27,20 @@
   },
   "homepage": "https://github.com/lholmquist/brimley#readme",
   "dependencies": {
+    "chalk": "~4.0.0",
     "dockerode": "~3.2.0",
     "js-yaml": "~3.14.0",
-    "kubernetes-client": "~9.0.0"
+    "kubernetes-client": "~9.0.0",
+    "uuid": "~8.1.0",
+    "yargs": "~15.3.1"
+  },
+  "devDependencies": {
+    "eslint": "~7.1.0",
+    "eslint-config-semistandard": "^15.0.0",
+    "eslint-config-standard": "^14.0.0",
+    "eslint-plugin-import": "~2.20.1",
+    "eslint-plugin-node": "~11.1.0",
+    "eslint-plugin-promise": "~4.2.1",
+    "eslint-plugin-standard": "^4.0.0"
   }
 }

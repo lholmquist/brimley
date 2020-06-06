@@ -6,8 +6,6 @@ const brimley = require('.');
   await brimley.deploy();
 })();
 
-
-
 // docker.listImages({all: true}, function(err, containers) {
 //     console.log('ALL: ' + containers.length);
 //   });
