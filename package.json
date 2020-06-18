@@ -8,7 +8,9 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint bin/* lib/**/*.js index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "files": [
     "index.js",
@@ -40,7 +42,8 @@
     "js-yaml": "~3.14.0",
     "kubernetes-client": "~9.0.0",
     "uuid": "~8.1.0",
-    "yargs": "~15.3.1"
+    "yargs": "~15.3.1",
+    "snyk": "^1.345.0"
   },
   "devDependencies": {
     "eslint": "~7.1.0",
@@ -50,5 +53,6 @@
     "eslint-plugin-node": "~11.1.0",
     "eslint-plugin-promise": "~4.2.1",
     "eslint-plugin-standard": "^4.0.0"
-  }
+  },
+  "snyk": true
 }
