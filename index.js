@@ -14,8 +14,13 @@ async function applyResource () {
   cli({ cmd: 'apply-resource' });
 }
 
+async function undeploy () {
+  cli({ cmd: 'undeploy' });
+}
+
 module.exports = {
   deploy,
   build,
-  applyResource
+  applyResource,
+  undeploy
 };
