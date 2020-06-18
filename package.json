@@ -8,6 +8,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint bin/* lib/**/**/*.js index.js",
+    "ci": "npm run lint",
     "test": "npm run lint"
   },
   "files": [
