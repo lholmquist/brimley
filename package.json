@@ -37,7 +37,7 @@
   "homepage": "https://github.com/lholmquist/brimley#readme",
   "dependencies": {
     "chalk": "~4.1.0",
-    "dockerode": "~3.2.0",
+    "dockerode": "~3.2.1",
     "js-yaml": "~3.14.0",
     "kubernetes-client": "~9.0.0",
     "uuid": "~8.2.0",
