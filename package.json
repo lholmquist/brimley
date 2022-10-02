@@ -9,7 +9,9 @@
   "scripts": {
     "lint": "eslint bin/* lib/**/**/*.js index.js",
     "ci": "npm run lint",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "files": [
     "index.js",
@@ -37,11 +39,12 @@
   "homepage": "https://github.com/lholmquist/brimley#readme",
   "dependencies": {
     "chalk": "~4.1.0",
-    "dockerode": "~3.2.1",
+    "dockerode": "~3.3.0",
     "js-yaml": "~3.14.0",
     "kubernetes-client": "~9.0.0",
     "uuid": "~8.3.1",
-    "yargs": "~16.1.1"
+    "yargs": "~16.1.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "eslint": "~7.14.0",
@@ -51,5 +54,6 @@
     "eslint-plugin-node": "~11.1.0",
     "eslint-plugin-promise": "~4.2.1",
     "eslint-plugin-standard": "^4.1.0"
-  }
+  },
+  "snyk": true
 }
