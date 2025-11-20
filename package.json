@@ -38,13 +38,13 @@
   "dependencies": {
     "chalk": "~4.1.0",
     "dockerode": "~3.2.1",
-    "js-yaml": "~3.14.0",
+    "js-yaml": "~3.14.2",
     "kubernetes-client": "~9.0.0",
     "uuid": "~8.3.1",
     "yargs": "~16.1.1"
   },
   "devDependencies": {
-    "eslint": "~7.14.0",
+    "eslint": "~9.0.0",
     "eslint-config-semistandard": "^15.0.1",
     "eslint-config-standard": "^14.0.0",
     "eslint-plugin-import": "~2.22.1",
